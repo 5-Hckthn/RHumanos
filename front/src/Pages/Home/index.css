@@ -9,8 +9,7 @@
 
 .sideBar {
     width: 10vw;
-    height: 94vh;
-    background-color: rgba(70, 59, 59, 0.685);
+    height: 94vh;   
     border-radius: 10px;
     display: grid;
     grid-template-rows: 15% 70% 15%;
@@ -42,19 +41,29 @@
     height: 90vh;
     width: 86vw;
     margin-top: 1%;
-    border-radius: 0 10px 10px 0;
+    border-radius: 20px 20px 20px 20px;
 }
 /* ///////////////////////////////// */
 
 .header {
-    background-color: red;
     height: 10vh;
     display: grid;
-    grid-template-columns: 80% 10% 10%;
+    grid-template-columns: 89% 5% 5%;
+    border-radius: 20px 20px 0 0;
+    border-bottom: 1px solid gray;
+    color: black;
 }
 
 .titulo {
     font-size: 4vw;
+}
+
+.notificaciones {
+    margin: auto;
+}
+
+.globalColor {
+    margin: auto;
 }
 
 /* ///////////////////////////////// */
