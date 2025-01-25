@@ -1,0 +1,13 @@
+.NavPC {
+    background-color: rgb(52, 188, 37);
+    width: 100vw;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    font-size: 18px;
+    color: white;
+}.NavPC {
+    cursor: pointer;
+}
