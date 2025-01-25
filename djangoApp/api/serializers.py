@@ -1,9 +1,14 @@
 from rest_framework import serializers
-from .models import Users,Puestos, Justificaciones, Descansos, Jornada
+from .models import Users,Puestos, Justificaciones, Descansos, Jornada, Roles
 
 class PuestosSerializer(serializers.ModelSerializer):
     class Meta:
         model = Puestos
+        fields = '__all__'
+
+class RolesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Roles
         fields = '__all__'
 
 class JustificacionesSerializer(serializers.ModelSerializer):
