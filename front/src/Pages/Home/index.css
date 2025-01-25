@@ -1,0 +1,95 @@
+.containerHome {
+    width: 96vw;
+    height: 96vh;
+    margin-left: 2%;
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+
+.sideBar {
+    width: 10vw;
+    height: 94vh;
+    background-color: rgba(70, 59, 59, 0.685);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 15% 70% 15%;
+    text-align: center;
+}
+
+.perfil {
+    background-color: rgb(255, 255, 255);
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.nav {
+    margin-top: 30%;
+    margin-bottom: 30%;
+}
+
+.logOut {
+    margin: auto;
+}
+
+
+/* ////////////////// */
+
+.content {
+    background-color: #fff;
+    height: 90vh;
+    width: 86vw;
+    margin-top: 1%;
+    border-radius: 0 10px 10px 0;
+}
+/* ///////////////////////////////// */
+
+.header {
+    background-color: red;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 80% 10% 10%;
+}
+
+.titulo {
+    font-size: 4vw;
+}
+
+/* ///////////////////////////////// */
+
+.main {
+    display: grid;
+    grid-template-columns: 38.5% 60%;
+    margin: 2%;
+}
+
+.reportes {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.reporteSemanal {
+    background-color: gray;
+    width: 30vw;
+    height: 20vh;
+    border-radius: 12px;
+    
+}
+
+.reporteMensual {
+    background-color: gray;
+    width: 30vw;
+    height: 20vh;
+    margin-top: 5%; 
+    border-radius: 12px;
+}
+
+.graficoMensual {
+    width: 50vw;
+    background-color: rgb(113, 76, 76);
+    border-radius: 12px;
+}
