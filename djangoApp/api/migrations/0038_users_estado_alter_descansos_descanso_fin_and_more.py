@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='descansos',
             name='descanso_fin',
-            field=models.DateTimeField(auto_now_add=True),
+            field=models.DateTimeField(auto_now_add=True, null=True),
         ),
         migrations.AlterField(
             model_name='descansos',
