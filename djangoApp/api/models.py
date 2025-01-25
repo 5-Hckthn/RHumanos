@@ -13,6 +13,10 @@ class Justificaciones(models.Model):
     fecha_inicial = models.DateField(null=True, blank=True)
     fecha_final = models.DateField(null=True, blank=True)
 
+class Roles(models.Model):
+    role_ID = models.AutoField(primary_key=True)
+    role_name = models.CharField(max_length=255, null=True, blank=True)
+
 class Users(models.Model):
     id = models.AutoField(primary_key=True)
     cedula = models.CharField(
@@ -27,13 +31,10 @@ class Users(models.Model):
     password = models.CharField(max_length=255, null=True, blank=True)
     phone_number = models.CharField(max_length=8,null=True, blank=True)
     date_create = models.DateTimeField(auto_now_add=True)
-    roles = models.CharField(max_length=11, choices=[('Director', 'Director'), ('Lider', 'Lider'), ('Colaborador', 'Colaborador')],null=True, blank=True)
+    roles = models.ForeignKey(Roles, on_delete=models.CASCADE, null=True, blank=True)
     estado = models.BooleanField(default=True, null=True, blank=True)
     puesto = models.ForeignKey(Puestos, on_delete=models.CASCADE, null=True, blank=True)
 
-class Roles(models.Model):
-    role_ID = models.AutoField(primary_key=True)
-    role_name = models.CharField(max_length=255, null=True, blank=True)
 
 class Jornada(models.Model):
     jornada_ID = models.AutoField(primary_key=True)
