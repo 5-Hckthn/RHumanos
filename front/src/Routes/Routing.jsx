@@ -10,9 +10,11 @@ import Crud from '../Pages/Crud/Crud';
 const Routing = () => {
   return (
     <Routes>
+       <Route path='/' element={<Page404 />} /> {/* Este será el Loggin */}
       <Route path='/home' element={<Home />} />
-      <Route path='/crud' element={<Crud />} />
-      <Route path='/register' element={<Register />} />
+      <Route path='/asistencia' element={<Page404 />} />
+      <Route path='/crud' element={<Page404 />} />
+      <Route path='/register' element={<Page404 />} />
       <Route path='*' element={<Page404 />} />
     </Routes>
   );
