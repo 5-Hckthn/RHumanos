@@ -20,12 +20,8 @@ const Home = () => {
         <div className="content">
           <div className="header">
             <div className="titulo">Rec. Humanos</div>
-            <div className="notificaciones"></div>
+            <div className="notificaciones">Not.</div>
             <div className="globalColor"><SwitchGlobalColor /></div>
-            <div className="pathAndDate">
-              <div className="path"></div>
-              <div className="date"></div>
-            </div>
           </div>
           <div className="main">
             <div className="reportes">
