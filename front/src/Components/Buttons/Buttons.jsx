@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Buttons.css';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
+
 
 function Buttons() {
     const [count, setCount] = useState(0);
@@ -52,8 +55,9 @@ function Buttons() {
 
     return (
         <div className='containerModal'>
-            <h1>Count: {formattedTime}</h1>
-            <div className='buttons'>
+            <div><AccountCircleIcon style={{ color: 'black', fontSize: '60px' }} /></div>
+            <h1>{formattedTime}</h1>
+            <div className='buttons' style={{marginTop: '20px'}}>
             <button onClick={handleStart} disabled={isRunning || showResume}>
                 Start
             </button>
