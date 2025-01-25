@@ -11,6 +11,8 @@ const SwitchGlobalColor = () => {
     const handleColorState = () => setColorStateGlobal(!colorStateGlobal)
     
     const { setColorStateGlobal, colorStateGlobal } = useContextValue()
+
+
     //////////////////////////////////
     
     document.body.style.backgroundColor = colorStateGlobal ? '#fff' : '#000000ea'
@@ -18,7 +20,7 @@ const SwitchGlobalColor = () => {
   return (
     <>
     <div className="containerSwitch">
-      <div onClick={() => handleColorState()}>{colorStateGlobal ? <ModeNightIcon/> : <LightModeIcon />}</div>
+      <div className='switchGlobal' onClick={() => handleColorState()}>{colorStateGlobal ? <ModeNightIcon/> : <LightModeIcon />}</div>
     </div>
     
     </>
