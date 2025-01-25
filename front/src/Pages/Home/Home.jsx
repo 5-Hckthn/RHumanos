@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css'
 import SwitchGlobalColor from '../../Components/SwitchGlobalColor/SwitchGlobalColor'
+import Notificaciones from '../../Components/Notificaciones/Notificaciones';
 
 // Icons
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -8,7 +9,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 
 import NavPC from '../../Components/NavPC/NavPC'
 const Home = () => {
-  
+
   return (
     <>
       <div className="containerHome">
@@ -20,7 +21,7 @@ const Home = () => {
         <div className="content">
           <div className="header">
             <div className="titulo">Rec. Humanos</div>
-            <div className="notificaciones">Not.</div>
+            <div className="notificaciones"><Notificaciones/></div>
             <div className="globalColor"><SwitchGlobalColor /></div>
           </div>
           <div className="main">
@@ -34,7 +35,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </>
+    </> 
   )
 }
 
