@@ -1,10 +1,14 @@
 from rest_framework.viewsets import ModelViewSet
-from .models import Users,Puestos,Justificaciones, Descansos, Jornada 
-from .serializers import UsersSerializer,PuestosSerializer,JustificacionesSerializer, DescansoSerializer, JornadaSerializer
+from .models import Users,Puestos,Justificaciones, Descansos, Jornada , Roles
+from .serializers import UsersSerializer, PuestosSerializer, JustificacionesSerializer, DescansoSerializer, JornadaSerializer, RolesSerializer
 
 class PuestosViewSet(ModelViewSet):
     queryset = Puestos.objects.all()
     serializer_class = PuestosSerializer
+
+class RolesViewSet(ModelViewSet):
+    queryset = Roles.objects.all()
+    serializer_class = RolesSerializer
 
 class JustificacionesViewSet(ModelViewSet):
     queryset = Justificaciones.objects.all()
