@@ -55,6 +55,7 @@
 .titulo {
     font-size: 4vw;
     padding: 15px;
+    font-weight: bold;
 }
 
 .notificaciones {
