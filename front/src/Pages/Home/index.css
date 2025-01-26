@@ -1,0 +1,148 @@
+    .containerHome {
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+
+.sideBar {
+    width: 10vw;
+    height: 94vh;   
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 15% 70% 15%;
+    text-align: center;
+}
+
+.perfil {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.nav {
+    margin-top: 30%;
+    margin-bottom: 30%;
+}
+
+.logOut {
+    margin: auto;
+}
+
+
+/* ////////////////// */
+
+.content {
+    background-color: #fff;
+    height: 92vh;
+    width: 88vw;
+    margin-top: 2%;
+    border-radius: 20px 20px 20px 20px;
+}
+/* ///////////////////////////////// */
+
+.header {
+    display: grid;
+    grid-template-columns: 89% 5% 5%;
+    border-radius: 20px 20px 0 0;
+    border-bottom: 1px solid gray;
+    color: black;
+    align-items: center;
+}.header > div > div:hover {
+   cursor: pointer
+}
+
+.titulo {
+    font-size: 4vw;
+}
+
+.notificaciones {
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.globalColor {
+    margin: auto;
+}
+
+
+/* ///////////////////////////////// */
+
+.main {
+    display: grid;
+    grid-template-columns: 38.5% 60%;
+    margin: 2%;
+}
+
+.reportes {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.reporteSemanal {
+    background-color: gray;
+    width: 30vw;
+    height: 20vh;
+    border-radius: 12px;
+    
+}
+
+.reporteMensual {
+    background-color: gray;
+    width: 30vw;
+    height: 20vh;
+    margin-top: 5%; 
+    border-radius: 12px;
+}
+
+.graficoMensual {
+    width: 50vw;
+    background-color: rgb(113, 76, 76);
+    border-radius: 12px;
+}
+
+
+/* Estilos del modal */
+.modalOverlay {
+  position: fixed;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px 10em;
+  
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  width: 400px;
+  height: 200px;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border: solid black 3px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: red;
+}
