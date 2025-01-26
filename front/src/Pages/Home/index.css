@@ -1,6 +1,8 @@
-    .containerHome {
+.containerHome {
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 10vw 90vw;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 .sideBar {
@@ -19,10 +21,11 @@
     margin: auto;
     cursor: pointer;
 }
-
-.nav {
-    margin-top: 30%;
-    margin-bottom: 30%;
+.icons{
+    margin: auto;
+}
+.icons:hover {
+    transform: scale(1.2);
 }
 
 .logOut {
@@ -34,10 +37,7 @@
 
 .content {
     background-color: #fff;
-    height: 92vh;
-    width: 88vw;
-    margin-top: 2%;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
 }
 /* ///////////////////////////////// */
 
@@ -48,12 +48,15 @@
     border-bottom: 1px solid gray;
     color: black;
     align-items: center;
+    padding: 15px;
 }.header > div > div:hover {
-   cursor: pointer
+   cursor: pointer;
+   transform: scale(1.2);
 }
 
 .titulo {
     font-size: 4vw;
+    font-weight: bold;
 }
 
 .notificaciones {

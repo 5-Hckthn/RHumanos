@@ -39,13 +39,13 @@ const Home = () => {
       <div className="containerHome">
         <div className="sideBar">
           <div className="perfil" onClick={handleOpenModal}>
-            <AccountCircleIcon style={{ color: 'white', fontSize: '60px' }} />
+            <AccountCircleIcon style={{ color: 'white', fontSize: '60px'}} className='icons' />
             <div>
               <div className="nombre">Nombre</div>
             </div>
           </div>
-          <div className="nav"><NavPC /></div>
-          <div onClick={() => loggout()} className="logOut"><LogoutIcon/></div>
+          <div className="nav"><NavPC className='icons'/></div>
+          <div onClick={() => loggout()} className="logOut"><LogoutIcon className='icons'/></div>
         </div>
         <div className="content">
           <div className="header">
