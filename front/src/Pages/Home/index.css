@@ -1,6 +1,6 @@
 .containerHome {
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 10vw 90vw;
 }
 
 .sideBar {
@@ -19,10 +19,11 @@
     margin: auto;
     cursor: pointer;
 }
-
-.nav {
-    margin-top: 30%;
-    margin-bottom: 30%;
+.icons{
+    margin: auto;
+}
+.icons:hover {
+    transform: scale(1.2);
 }
 
 .logOut {
@@ -35,7 +36,7 @@
 .content {
     background-color: #fff;
     height: 90vh;
-    width: 86vw;
+    width: auto;
     margin-top: 1%;
     border-radius: 20px 20px 20px 20px;
 }
