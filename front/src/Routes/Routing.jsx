@@ -1,6 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
 
-// Páginas
 import Page404 from '../Pages/Page404/Page404';
 import Home from '../Pages/Home/Home';
 import Register from '../Pages/Register/Register';

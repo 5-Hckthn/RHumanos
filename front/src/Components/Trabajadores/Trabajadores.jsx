@@ -45,7 +45,6 @@ const Trabajadores = () => {
             <div className="position-trabajador-trabajadores">
               {trabajador.cedula || "Cargando puesto..."} | {puestos[trabajador.puesto] || "Cargando puesto..."}
             </div>
-            
           </div>
           🟢
         </div>
