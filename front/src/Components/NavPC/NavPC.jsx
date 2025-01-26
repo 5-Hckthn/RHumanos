@@ -46,9 +46,9 @@ const NavPC = () => {
   return (
       <>
         <nav className='NavPC'>
-          <div onClick={() => Navigation('/home')}><HomeIcon style={{fontSize: 36}} className='icons'/></div>
-          <div onClick={() => Navigation('/asistencia')}><AppRegistrationIcon style={{fontSize: 36}} className='icons'/></div>
-          {['lider', 'director'].includes(RoleIdData) ? <div onClick={() => Navigation('/justificacion')}><DriveFileRenameOutlineIcon style={{fontSize: 36}} className='icons' /></div> : null}
+          <div onClick={() => Navigation('/home')}><HomeIcon style={{fontSize: 36}}/></div>
+          <div onClick={() => Navigation('/asistencia')}><AppRegistrationIcon style={{fontSize: 36}}/></div>
+          {['lider', 'director'].includes(RoleIdData) ? <div onClick={() => Navigation('/justificacion')}><DriveFileRenameOutlineIcon style={{fontSize: 36}}/></div> : null}
           {RoleIdData == 'colaborador' ? <div onClick={() => Navigation('/justificacion')}><DriveFileRenameOutlineIcon style={{fontSize: 36}}/></div> : null}
           {RoleIdData == 'director' ? <div onClick={() => Navigation('/crud')}><FolderSharedIcon style={{fontSize: 36}}/></div> : null}
         </nav>

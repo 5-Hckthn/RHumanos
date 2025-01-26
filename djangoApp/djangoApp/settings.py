@@ -89,7 +89,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', 
         'NAME': 'django-react',
         'USER': 'root',
-        'PASSWORD': '1234',
+        'PASSWORD': 'Supernova241020',
         'PORT': '3306',
     }
 }

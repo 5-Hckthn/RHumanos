@@ -18,8 +18,8 @@ const Routing = () => {
     <Routes>
       <Route path='/' element={<Login />} /> {/* Este será el Loggin */}
       <Route path='/home' element={<Home />} />
-      <Route path='/asistencia' element={<Asistencia />} />
-      <Route path='/crud' element={<Page404 />} />
+      <Route path='/asistencia' element={<Asistencias />} />
+      <Route path='/crud' element={<Crud  />} />
       <Route path='/register' element={<Register />} />
       <Route path='/perfil' element={<Perfil />} />
       <Route path='*' element={<Page404 />} />
