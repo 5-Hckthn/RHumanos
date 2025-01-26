@@ -3,6 +3,8 @@ import './index.css';
 import SwitchGlobalColor from '../../Components/SwitchGlobalColor/SwitchGlobalColor';
 import Buttons from '../../Components/Buttons/Buttons';
 
+import { useContextValue } from '../../Context/UseContext';
+
 // Icons
 import LogoutIcon from '@mui/icons-material/Logout';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -22,6 +24,13 @@ const Home = () => {
     setIsModalOpen(false);
   };
 
+  const loggout = () => {
+    localStorage.removeItem('userId')
+    setUserId(null)
+  }
+
+  const { setUserId } = useContextValue()
+  
   return (
     <>
       <div className="containerHome">
@@ -33,7 +42,7 @@ const Home = () => {
             </div>
           </div>
           <div className="nav"><NavPC /></div>
-          <div className="logOut"><LogoutIcon /></div>
+          <div onClick={() => loggout()} className="logOut"><LogoutIcon/></div>
         </div>
         <div className="content">
           <div className="header">

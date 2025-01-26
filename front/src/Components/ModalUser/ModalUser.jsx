@@ -1,9 +1,10 @@
-import React, { useEffect, useState, useSyncExternalStore } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useContextValue } from '../../Context/UseContext'
 import { getUserById } from '../../Server/Crud/Crud';
 import './index.css'
 
 const ModalUser = () => {
+
     const { user, setUser } = useContextValue()
     const [userById, setuserById] = useState([])
     const [openModal,setOpenModal] = useState(false)
@@ -19,7 +20,6 @@ const ModalUser = () => {
         setUser(null)
         setOpenModal(false)
     }
-
 
     const obtainInfoById = async () => {
       const data = await getUserById(user)
