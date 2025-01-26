@@ -1,4 +1,4 @@
-.containerHome {
+    .containerHome {
     display: grid;
     grid-template-columns: 10% 90%;
 }
@@ -34,9 +34,9 @@
 
 .content {
     background-color: #fff;
-    height: 90vh;
-    width: 86vw;
-    margin-top: 1%;
+    height: 92vh;
+    width: 88vw;
+    margin-top: 2%;
     border-radius: 20px 20px 20px 20px;
 }
 /* ///////////////////////////////// */
@@ -47,6 +47,9 @@
     border-radius: 20px 20px 0 0;
     border-bottom: 1px solid gray;
     color: black;
+    align-items: center;
+}.header > div > div:hover {
+   cursor: pointer
 }
 
 .titulo {
@@ -55,11 +58,19 @@
 
 .notificaciones {
     margin: auto;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .globalColor {
     margin: auto;
 }
+
 
 /* ///////////////////////////////// */
 

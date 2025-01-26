@@ -16,8 +16,8 @@
 .modalUser {
     background-color: #ffffff;
     border-radius: 10px;
-    color: white;
-    width: 50vw;
+    color: black;
+    width: 30vw;
     height: 80vh;
     display: grid;
     place-items: center;
@@ -28,16 +28,4 @@
     height: 90%;
     display: grid;
     place-items: center;
-
-}
-
-.containerXtoCloseModal {
-    border: 1px solid gray;
-    color: gray;
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-}.containerXtoCloseModal:hover {
-    border: 1px solid white;
-    color: white;
 }
