@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { postUsers } from '../../Server/Users/Users';
 import { fetchRoles, fetchPuestos } from '../../Server/Options/Options'; // Funciones para obtener datos
+import './PruebaRegister.css';
 
 const FormularioRegister = () => {
   const [formData, setFormData] = useState({
@@ -66,8 +67,9 @@ const FormularioRegister = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="container">
+      <h1 className="title">Registro de Usuario</h1>
+      <form className="form" onSubmit={handleSubmit}>
         <input
           autoFocus
           type="text"
@@ -75,6 +77,7 @@ const FormularioRegister = () => {
           placeholder="Name"
           value={formData.name}
           onChange={handleInputChange}
+          className="input"
         />
         <input
           type="text"
@@ -82,6 +85,7 @@ const FormularioRegister = () => {
           placeholder="Last Name"
           value={formData.lastName}
           onChange={handleInputChange}
+          className="input"
         />
         <input
           type="email"
@@ -89,6 +93,7 @@ const FormularioRegister = () => {
           placeholder="Email"
           value={formData.email}
           onChange={handleInputChange}
+          className="input"
         />
         <input
           type="password"
@@ -96,11 +101,13 @@ const FormularioRegister = () => {
           placeholder="Password"
           value={formData.password}
           onChange={handleInputChange}
+          className="input"
         />
         <select
           name="rol"
           value={formData.rol}
           onChange={handleInputChange}
+          className="select"
         >
           <option value="" disabled>
             Select Role
@@ -115,6 +122,7 @@ const FormularioRegister = () => {
           name="puesto"
           value={formData.puesto}
           onChange={handleInputChange}
+          className="select"
         >
           <option value="" disabled>
             Select Puesto
@@ -131,6 +139,7 @@ const FormularioRegister = () => {
           placeholder="Cedula"
           value={formData.cedula}
           onChange={handleInputChange}
+          className="input"
         />
         <input
           type="text"
@@ -138,8 +147,11 @@ const FormularioRegister = () => {
           placeholder="Phone"
           value={formData.phone}
           onChange={handleInputChange}
+          className="input"
         />
-        <button type="submit">Registrar User</button>
+        <button type="submit" className="button">
+          Registrar User
+        </button>
       </form>
     </div>
   );
