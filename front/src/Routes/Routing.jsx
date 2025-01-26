@@ -4,7 +4,9 @@ import { Routes, Route } from 'react-router-dom';
 import Page404 from '../Pages/Page404/Page404';
 import Home from '../Pages/Home/Home';
 import Register from '../Pages/Register/Register';
-import JustificacionesForm from '../Components/Justificaciones/justificaciones';
+import Crud from '../Pages/Crud/Crud';
+import Asistencia from '../Pages/Asistencias/Asistencia';
+import Login from '../Pages/Crud/Login/Login'
 // Páginas
 import Login from '../Pages/Login/Login';
 import Perfil from '../Pages/Perfil/Perfil';
@@ -17,7 +19,7 @@ const Routing = () => {
     <Routes>
       <Route path='/' element={<Login />} /> {/* Este será el Loggin */}
       <Route path='/home' element={<Home />} />
-      <Route path='/asistencias' element={<Asistencias />} />
+      <Route path='/asistencia' element={<Asistencia />} />
       <Route path='/crud' element={<Page404 />} />
       <Route path='/register' element={<Register />} />
       <Route path='/perfil' element={<Perfil />} />
