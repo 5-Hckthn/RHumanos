@@ -4,8 +4,10 @@ import { Routes, Route } from 'react-router-dom';
 import Page404 from '../Pages/Page404/Page404';
 import Home from '../Pages/Home/Home';
 import Register from '../Pages/Register/Register';
+import Login from '../Pages/Crud/Login/Login';
 import Crud from '../Pages/Crud/Crud';
-import Asistencia from '../Pages/Asistencias/Asistencia';
+import Buttons from '../Components/Buttons/Buttons';
+// import Asistencia from '../Pages/Asistencias/Asistencia';
 // Páginas
 
 const Routing = () => {
@@ -18,7 +20,6 @@ const Routing = () => {
       <Route path='/register' element={<Register />} />
       <Route path='*' element={<Page404 />} />
       <Route path='/a' element={<Buttons />} />
-      <Route path='/trabajadores' element={<Trabajadores />} />
     </Routes>
   );
 };

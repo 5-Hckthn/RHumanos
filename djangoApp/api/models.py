@@ -8,7 +8,7 @@ class Puestos(models.Model):
 class Justificaciones(models.Model):
     justificacion_ID = models.AutoField(primary_key=True)
     descripcion = models.CharField(max_length=255, default="No hay descripcion", null=True, blank=True)
-    estado = models.CharField(max_length=10, choices=[('Aprobada', 'Aprobada'), ('Pendiente', 'Pendiente'), ('Denegada', 'Denegada')],null=False, blank=False)
+    estado = models.CharField(max_length=10,default="Pendiente", choices=[('Aprobada', 'Aprobada'), ('Pendiente', 'Pendiente'), ('Denegada', 'Denegada')],null=False, blank=False)
     fecha_creacion = models.DateField(auto_now_add=True)
 
 class Roles(models.Model):
@@ -35,7 +35,7 @@ class Users(models.Model):
 
 class Jornada(models.Model):
     jornada_ID = models.AutoField(primary_key=True)
-    estado = models.CharField(max_length=10, default="Pendiente", choices=[('Aprobada', 'Aprobada'), ('Pendiente', 'Pendiente'), ('Denegada', 'Denegada')],null=False, blank=False)
+    estado = models.CharField(max_length=10, default="Incompleta", choices=[('Completa', 'Completa'), ('Incompleta', 'Incompleta')],null=False, blank=False)
     fecha = models.DateField(auto_now_add=True)
     hora_inicio = models.TimeField(auto_now_add=True)
     hora_salida = models.TimeField(null=True, blank=True)
