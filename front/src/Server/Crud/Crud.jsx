@@ -2,6 +2,8 @@ const url = 'http://localhost:8000/users/'
 
 const urlRol = 'http://localhost:8000/roles/'
 
+const urlPuestos = 'http://localhost:8000/puestos/'
+
 const getUsersCrud = async () => {
   try {
     const response = await fetch(url);
@@ -31,9 +33,19 @@ const getRoleById = async (id) => {
     console.error("Error fetching data:", error);
   }
 };
+
+const getAllPuestos = async () => {
+  try {
+    const response = await fetch(`${urlPuestos}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
 //////////////////////////////////////////////////////////////////////////////
 
-export { getUsersCrud, getUserById, getRoleById }
+export { getUsersCrud, getUserById, getRoleById, getAllPuestos }
 
 
 // const postToys = async (newToy) => {

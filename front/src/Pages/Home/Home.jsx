@@ -42,11 +42,7 @@ const Home = () => {
             </div>
           </div>
           <div className="nav"><NavPC /></div>
-<<<<<<< HEAD
           <div onClick={() => loggout()} className="logOut"><LogoutIcon/></div>
-=======
-          <div className="logOut"><LogoutIcon /></div>
->>>>>>> 4d4d525207e1df016e71a4c440983437eea83c35
         </div>
         <div className="content">
           <div className="header">
