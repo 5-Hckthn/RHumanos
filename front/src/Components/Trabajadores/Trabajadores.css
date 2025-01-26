@@ -1,0 +1,41 @@
+Contenedor con scroll vertical
+.table-container {
+    max-height: 300px; /* Altura máxima para la ventana pequeña */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    border: 1px solid #ddd; /* Borde de la tabla */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  /* Estilo de la tabla */
+  .trabajadores-table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Bordes de celdas unidos */
+  }
+  
+  .trabajadores-table th,
+  .trabajadores-table td {
+    padding: 12px; /* Espaciado interno */
+    text-align: left; /* Alineación del texto */
+    border-bottom: 1px solid #ddd; /* Línea inferior */
+  }
+  
+  /* Hover en filas */
+  .trabajadores-table tr:hover {
+    background-color: #f9f9f9; /* Fondo al pasar el ratón */
+    cursor: pointer; /* Indica que es clickeable */
+  }
+  
+  /* Indicador de estado circular */
+  .status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Hace el círculo */
+  }
+  
+  /* Filas clickeables */
+  .clickable-row {
+    transition: background-color 0.2s ease;
+  }
+  
