@@ -1,0 +1,75 @@
+.back-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+  
+form .input-box {
+    margin-bottom: 20px;
+}
+  
+input {
+    width: 90%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+  
+input:focus {
+    border: 1px solid #4CAF50;
+    box-shadow: 0 0 5px #4CAF50;
+}
+  
+.buttonLogin {
+    width: 100%;
+    padding: 10px;
+    background-color: #11dde8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+ button:hover {
+    background-color: #45a049;
+}
+  
+.register-link {
+    text-align: center;
+    margin-top: 10px;
+}
+  
+.remenber-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 10px 0;
+    color: #555;
+}
+  
+.remenber-forgot a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+  
+.remenber-forgot a:hover {
+    text-decoration: underline;
+}
+  
