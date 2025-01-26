@@ -1,35 +1,37 @@
 import React, { useEffect, useState } from 'react'
-import { useContextValue } from '../../Context/UseContext'
-import { getUserById } from '../../Server/Crud/Crud'
-
-// user, setUser
+import { ContextProvider, useContextValue } from '../../Context/UseContext'
+import { getUserById } from '../../Server/Crud/Crud';
+import './index.css'
 
 const ModalUser = () => {
-    const [OpenModal, setOpenModal] = useState(false)
-    const [userData, setuserData] = useState([])
-    const { user, setUser } = useContextValue()
-
-
-    const obtenerDatos = async () => {
-        const data = await getUserById(user)
-        setuserData(data)
-    }
+    const { userId, setUserId } = useContextValue()
+    const [userById, setuserById] = useState([])
 
     useEffect(() => {
-        if (user) {
-            obtenerDatos()
-            OpenModal(true)
+        if (userId) {
+            obtainInfoById()
+        } else {    
         }
-    }, [user])
+    }, [userId])
 
-    const closeModal = () => {
-        setOpenModal(false)
+    const cerrarModal = () => {
+        setUserId(null)
     }
 
 
+    const obtainInfoById = async () => {
+      const data = await getUserById(userId)
+      console.log(userId, data);
+      setuserById(data)
+    }
 
-  return (
-    <div className='containerModalUser'>
-        <div>Nombre</div>
-        <div onClick={() => closeModal()}>X</div>
-    </div>
+    return (
+        <div className='containerModalUser'>
+            <div>Nombre</div>
+            <div onClick={() => closeModal()}>X</div>
+        </div>
+    )
+
+}
+
+export default ModalUser;

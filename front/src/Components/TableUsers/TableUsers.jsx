@@ -41,7 +41,6 @@ const TableUsers = () => {
 
   useEffect(() => {
     obtenerUsuarios()
-    // l
   }, [])
     
   return (

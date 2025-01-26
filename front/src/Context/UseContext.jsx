@@ -7,9 +7,7 @@ export const ContextProvider = ({ children }) => {
 
     const [contextId, setContextId] = useState();
     const [userId, setUserId] = useState();
-    const [user, setUser] = useState();
     const [colorStateGlobal, setColorStateGlobal] = useState();
-    const [user, setUser] = useState();
 
     useEffect(() => {
         if (userId) {
@@ -18,9 +16,7 @@ export const ContextProvider = ({ children }) => {
       }, [userId]);
 
     return (
-
-        <Context.Provider value={{  colorStateGlobal, setColorStateGlobal, userId, setUserId, contextId, setContextId, user, setUser  }}>
-
+        <Context.Provider value={{  colorStateGlobal, setColorStateGlobal, userId, setUserId, contextId, setContextId }}>
             {children}
         </Context.Provider>
     );

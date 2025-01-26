@@ -2,23 +2,16 @@ import React, { useState } from 'react';
 import './index.css';
 import SwitchGlobalColor from '../../Components/SwitchGlobalColor/SwitchGlobalColor';
 import Buttons from '../../Components/Buttons/Buttons';
-import ModalNotifications from '../../Components/ModalNotifications/ModalNotifications';
-
-import { useContextValue } from '../../Context/UseContext';
 
 // Icons
 import LogoutIcon from '@mui/icons-material/Logout';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-
-
 // Icons
 
 import NavPC from '../../Components/NavPC/NavPC';
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const { setUser } = useContextValue()
 
   // Abrir el modal
   const handleOpenModal = () => {
@@ -29,28 +22,23 @@ const Home = () => {
     setIsModalOpen(false);
   };
 
-  const loggout = () => {
-    localStorage.removeItem('userId')
-    setUser(null)
-  }
-
   return (
     <>
       <div className="containerHome">
         <div className="sideBar">
           <div className="perfil" onClick={handleOpenModal}>
-            <AccountCircleIcon style={{ color: 'white', fontSize: '60px'}} className='icons' />
+            <AccountCircleIcon style={{ color: 'white', fontSize: '60px' }} />
             <div>
               <div className="nombre">Nombre</div>
             </div>
           </div>
-          <div className="nav"><NavPC className='icons'/></div>
-          <div onClick={() => loggout()} className="logOut"><LogoutIcon className='icons'/></div>
+          <div className="nav"><NavPC /></div>
+          <div className="logOut"><LogoutIcon /></div>
         </div>
         <div className="content">
           <div className="header">
             <div className="titulo">Rec. Humanos</div>
-            <div className='Notificacions'><ModalNotifications /></div>
+            <div className="notificaciones">Not.</div>
             <div className="globalColor"><SwitchGlobalColor /></div>
           </div>
           <div className="main">
