@@ -9,7 +9,6 @@ export const ContextProvider = ({ children }) => {
     const [userId, setUserId] = useState();
     const [user, setUser] = useState();
     const [colorStateGlobal, setColorStateGlobal] = useState();
-    const [user, setUser] = useState();
 
     useEffect(() => {
         if (userId) {
