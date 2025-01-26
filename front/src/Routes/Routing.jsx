@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Page404 from '../Pages/Page404/Page404';
 import Home from '../Pages/Home/Home';
 import Register from '../Pages/Register/Register';
+import JustificacionesForm from '../Components/Justificaciones/justificaciones';
 // Páginas
 import Login from '../Pages/Login/Login';
 import Perfil from '../Pages/Perfil/Perfil';
@@ -20,6 +21,7 @@ const Routing = () => {
       <Route path='/register' element={<Register />} />
       <Route path='/perfil' element={<Perfil />} />
       <Route path='*' element={<Page404 />} />
+      <Route path='/justificaciones' element={<JustificacionesForm />} />
     </Routes>
   );
 };
