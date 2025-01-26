@@ -9,6 +9,7 @@ import { Button } from '@mui/material';
 import Buttons from '../Components/Buttons/Buttons';
 import Login from '../Pages/Crud/Login/Login'
 import Trabajadores from '../Components/Trabajadores/Trabajadores';
+import JustificacionesForm from '../Components/Justificaciones/justificaciones';
 // Páginas
 
 const Routing = () => {
@@ -22,6 +23,7 @@ const Routing = () => {
       <Route path='*' element={<Page404 />} />
       <Route path='/a' element={<Buttons />} />
       <Route path='/trabajadores' element={<Trabajadores />} />
+      <Route path='/justificaciones' element={<JustificacionesForm />} />
     </Routes>
   );
 };

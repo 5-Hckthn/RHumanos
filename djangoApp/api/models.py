@@ -10,8 +10,6 @@ class Justificaciones(models.Model):
     descripcion = models.CharField(max_length=255, default="No hay descripcion", null=True, blank=True)
     estado = models.CharField(max_length=10, choices=[('Aprobada', 'Aprobada'), ('Pendiente', 'Pendiente'), ('Denegada', 'Denegada')],null=False, blank=False)
     fecha_creacion = models.DateField(auto_now_add=True)
-    fecha_inicial = models.DateField(null=False, blank=False)
-    fecha_final = models.DateField(null=False, blank=False)
 
 class Roles(models.Model):
     role_ID = models.AutoField(primary_key=True)
