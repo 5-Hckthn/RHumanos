@@ -45,7 +45,7 @@ class Jornada(models.Model):
 class Descansos(models.Model):
     descanso_ID = models.AutoField(primary_key=True)
     descanso_inicio = models.DateTimeField(auto_now_add=True)
-    descanso_fin = models.DateTimeField(auto_now_add=True)
+    descanso_fin = models.DateTimeField(null=True, blank=True)
     descanso_total = models.DecimalField(max_digits=5, decimal_places=2, null=False, blank=False)
     jornada = models.ForeignKey(Jornada, on_delete=models.CASCADE, null=False, blank=False)
 
