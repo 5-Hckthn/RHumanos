@@ -33,3 +33,7 @@ const ModalUser = () => {
         <div>Nombre</div>
         <div onClick={() => closeModal()}>X</div>
     </div>
+  )
+}
+
+export default ModalUser
