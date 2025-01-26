@@ -53,7 +53,7 @@ const JustificacionesForm = () => {
     };
 
     return (
-        <div className="container_div_jusForm">
+        <div className="container_div_jusForm" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <h1 className="title_h1_jusForm">Formulario de Justificación</h1>
             <form className="form_jusForm" onSubmit={handleSubmit}>
                 <textarea
