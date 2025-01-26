@@ -1,4 +1,4 @@
-    .containerHome {
+.containerHome {
     display: grid;
     grid-template-columns: 10% 90%;
 }
@@ -54,6 +54,7 @@
 
 .titulo {
     font-size: 4vw;
+    padding: 15px;
 }
 
 .notificaciones {
@@ -78,6 +79,7 @@
     display: grid;
     grid-template-columns: 38.5% 60%;
     margin: 2%;
+    padding: 20px;
 }
 
 .reportes {
