@@ -8,6 +8,11 @@ import Crud from '../Pages/Crud/Crud';
 import Asistencia from '../Pages/Asistencias/Asistencia';
 import Login from '../Pages/Crud/Login/Login'
 // Páginas
+import Login from '../Pages/Login/Login';
+import Perfil from '../Pages/Perfil/Perfil';
+import Asistencias from '../Pages/Asistencias/Asistencias';
+import Justificaciones from '../Pages/Justificaciones/Justificaciones';
+
 
 const Routing = () => {
   return (
@@ -17,7 +22,9 @@ const Routing = () => {
       <Route path='/asistencia' element={<Asistencia />} />
       <Route path='/crud' element={<Page404 />} />
       <Route path='/register' element={<Register />} />
+      <Route path='/perfil' element={<Perfil />} />
       <Route path='*' element={<Page404 />} />
+      <Route path='/justificaciones' element={<Justificaciones />} />
     </Routes>
   );
 };

@@ -9,6 +9,7 @@ const ModalUser = () => {
     const [userData, setuserData] = useState([])
     const { user, setUser } = useContextValue()
 
+
     const obtenerDatos = async () => {
         const data = await getUserById(user)
         setuserData(data)
@@ -32,7 +33,3 @@ const ModalUser = () => {
         <div>Nombre</div>
         <div onClick={() => closeModal()}>X</div>
     </div>
-  )
-}
-
-export default ModalUser
