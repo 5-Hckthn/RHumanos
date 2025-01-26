@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { postUsers } from '../../Server/Users/Users';
 import { fetchRoles, fetchPuestos } from '../../Server/Options/Options';
+import './PruebaRegister.css';
 
 const FormularioRegister = () => {
   const [formData, setFormData] = useState({
