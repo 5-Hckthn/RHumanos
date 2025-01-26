@@ -28,8 +28,12 @@ const ModalUser = () => {
 
 
 
-  return (
-    <div className='containerModalUser'>
-        <div>Nombre</div>
-        <div onClick={() => closeModal()}>X</div>
-    </div>
+    return (
+        <div className='containerModalUser'>
+            <div>Nombre</div>
+            <div onClick={() => closeModal()}>X</div>
+        </div>
+    )
+}
+
+export default ModalUser;
