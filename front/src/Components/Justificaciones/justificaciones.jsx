@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { postJustificacion } from '../../Server/Crud/Crud'; // Asegúrate de tener esta función para hacer el POST
+import './justificaciones.css';
 
 
 const JustificacionesForm = () => {

@@ -68,9 +68,19 @@ const postJustificacion = async (justificacionData) => {
     throw error;  // Re-lanzamos el error para manejarlo en el componente si es necesario
   }
 };
+
+const getJustificaciones = async () => {
+  try {
+    const response = await fetch(urlJustificaciones);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
 //////////////////////////////////////////////////////////////////////////////
 
-export { getUsersCrud, getUserById, getRoleById, getAllPuestos, postJustificacion }
+export { getUsersCrud, getUserById, getRoleById, getAllPuestos, postJustificacion, getJustificaciones };
 
 
 // const postToys = async (newToy) => {

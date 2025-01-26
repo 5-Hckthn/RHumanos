@@ -35,7 +35,7 @@ input:focus {
     box-shadow: 0 0 5px #4CAF50;
 }
   
-button {
+.buttonLogin {
     width: 100%;
     padding: 10px;
     background-color: #11dde8;
@@ -54,16 +54,6 @@ button {
 .register-link {
     text-align: center;
     margin-top: 10px;
-}
-  
-.register-link a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
-}
-  
-.register-link a:hover {
-    text-decoration: underline;
 }
   
 .remenber-forgot {
