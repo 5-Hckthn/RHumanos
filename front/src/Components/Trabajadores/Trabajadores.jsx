@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; // Para la navegación hacia el perfil
 import "../Trabajadores/Trabajadores.css"; // Archivo CSS para estilos personalizados
+import { useContextValue } from "../../Context/UseContext";
 
 const Trabajadores = () => {
   // Estado para almacenar la lista de trabajadores
   const [trabajadores, setTrabajadores] = useState([]);
+
+  const { setUserId } = useContextValue()
+
+  const meterUserContext = (id) => {
+    setUserId(id)
+  }
   
   // Hook de navegación para redirigir al perfil del trabajador
   const navigate = useNavigate();
@@ -62,8 +69,10 @@ const Trabajadores = () => {
         </thead>
         <tbody>
           {trabajadores.map((trabajador) => (
+            <div>
             <tr 
               key={trabajador.id} 
+
               className="clickable-row" 
               onClick={() => handleRowClick(trabajador)} // Redirige al perfil al hacer clic
             >
@@ -75,6 +84,9 @@ const Trabajadores = () => {
                 <span className={`status-indicator ${getStatusColor(trabajador.status)}`}></span>
               </td>
             </tr>
+            
+            <button onClick={()=>meterUserContext(trabajador.id)} >poner</button>
+            </div>
           ))}
         </tbody>
       </table>
