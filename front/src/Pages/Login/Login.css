@@ -56,16 +56,6 @@ button {
     margin-top: 10px;
 }
   
-.register-link a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
-}
-  
-.register-link a:hover {
-    text-decoration: underline;
-}
-  
 .remenber-forgot {
     display: flex;
     justify-content: space-between;
