@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { postUsers } from '../../Server/Users/Users';
-import { fetchRoles, fetchPuestos } from '../../Server/Options/Options'; // Funciones para obtener datos
+import { fetchRoles, fetchPuestos } from '../../Server/Options/Options';
+///ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 
 const FormularioRegister = () => {
   const [formData, setFormData] = useState({
@@ -14,8 +15,9 @@ const FormularioRegister = () => {
     phone: '',
   });
 
-  const [roles, setRoles] = useState([]); // Opciones para el dropdown de roles
-  const [puestos, setPuestos] = useState([]); // Opciones para el dropdown de puestos
+  const [roles, setRoles] = useState([]);
+  const [puestos, setPuestos] = useState([]);
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     const fetchDropdownData = async () => {
@@ -37,9 +39,28 @@ const FormularioRegister = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const validateForm = () => {
+    const newErrors = {};
+    const { name, lastName, email, password, cedula, phone, rol, puesto } = formData;
+
+    if (!name.trim()) newErrors.name = 'Name is required.';
+    if (!lastName.trim()) newErrors.lastName = 'Last name is required.';
+    if (!email.trim()) newErrors.email = 'Email is required.';
+    if (!password.trim()) newErrors.password = 'Password is required.';
+    if (!rol) newErrors.rol = 'Role is required.';
+    if (!puesto) newErrors.puesto = 'Puesto is required.';
+    if (!cedula.match(/^\d{8,10}$/)) newErrors.cedula = 'Cedula must be 8-10 digits.';
+    if (!phone.match(/^\d{8}$/)) newErrors.phone = 'Phone must be exactly 8 digits.';
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Form is valid if no errors
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    registrarUsuario();
+    if (validateForm()) {
+      registrarUsuario();
+    }
   };
 
   const registrarUsuario = async () => {
@@ -63,6 +84,7 @@ const FormularioRegister = () => {
       cedula: '',
       phone: '',
     });
+    setErrors({});
   };
 
   return (
@@ -76,6 +98,7 @@ const FormularioRegister = () => {
           value={formData.name}
           onChange={handleInputChange}
         />
+        {errors.name && <p style={{ color: 'red' }}>{errors.name}</p>}
         <input
           type="text"
           name="lastName"
@@ -83,6 +106,7 @@ const FormularioRegister = () => {
           value={formData.lastName}
           onChange={handleInputChange}
         />
+        {errors.lastName && <p style={{ color: 'red' }}>{errors.lastName}</p>}
         <input
           type="email"
           name="email"
@@ -90,6 +114,7 @@ const FormularioRegister = () => {
           value={formData.email}
           onChange={handleInputChange}
         />
+        {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
         <input
           type="password"
           name="password"
@@ -97,6 +122,7 @@ const FormularioRegister = () => {
           value={formData.password}
           onChange={handleInputChange}
         />
+        {errors.password && <p style={{ color: 'red' }}>{errors.password}</p>}
         <select
           name="rol"
           value={formData.rol}
@@ -111,6 +137,7 @@ const FormularioRegister = () => {
             </option>
           ))}
         </select>
+        {errors.rol && <p style={{ color: 'red' }}>{errors.rol}</p>}
         <select
           name="puesto"
           value={formData.puesto}
@@ -125,6 +152,7 @@ const FormularioRegister = () => {
             </option>
           ))}
         </select>
+        {errors.puesto && <p style={{ color: 'red' }}>{errors.puesto}</p>}
         <input
           type="text"
           name="cedula"
@@ -132,6 +160,7 @@ const FormularioRegister = () => {
           value={formData.cedula}
           onChange={handleInputChange}
         />
+        {errors.cedula && <p style={{ color: 'red' }}>{errors.cedula}</p>}
         <input
           type="text"
           name="phone"
@@ -139,6 +168,7 @@ const FormularioRegister = () => {
           value={formData.phone}
           onChange={handleInputChange}
         />
+        {errors.phone && <p style={{ color: 'red' }}>{errors.phone}</p>}
         <button type="submit">Registrar User</button>
       </form>
     </div>
