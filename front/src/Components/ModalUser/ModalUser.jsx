@@ -37,7 +37,3 @@ const ModalUser = () => {
     )}
 export default ModalUser
 
-  )
-}
-
-export default ModalUser

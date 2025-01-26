@@ -5,14 +5,14 @@ import './PruebaRegister.css';
 
 const FormularioRegister = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    lastName: '',
+    first_name: '',
+    last_name: '',
     email: '',
     password: '',
-    rol: '',
+    roles: '',
     puesto: '',
     cedula: '',
-    phone: '',
+    phone_number: '',
   });
 
   const [roles, setRoles] = useState([]);
@@ -41,19 +41,19 @@ const FormularioRegister = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    const { name, lastName, email, password, cedula, phone, rol, puesto } = formData;
+    const { first_name, last_name, email, password, cedula, phone_number, roles, puesto } = formData;
 
-    if (!name.trim()) newErrors.name = 'Name is required.';
-    if (!lastName.trim()) newErrors.lastName = 'Last name is required.';
+    if (!first_name.trim()) newErrors.first_name = 'First name is required.';
+    if (!last_name.trim()) newErrors.last_name = 'Last name is required.';
     if (!email.trim()) newErrors.email = 'Email is required.';
     if (!password.trim()) newErrors.password = 'Password is required.';
-    if (!rol) newErrors.rol = 'Role is required.';
+    if (!roles) newErrors.roles = 'Role is required.';
     if (!puesto) newErrors.puesto = 'Puesto is required.';
     if (!cedula.match(/^\d{8,10}$/)) newErrors.cedula = 'Cedula must be 8-10 digits.';
-    if (!phone.match(/^\d{8}$/)) newErrors.phone = 'Phone must be exactly 8 digits.';
+    if (!phone_number.match(/^\d{8}$/)) newErrors.phone_number = 'Phone must be exactly 8 digits.';
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0; // Form is valid if no errors
+    return Object.keys(newErrors).length === 0; 
   };
 
   const handleSubmit = (e) => {
@@ -65,8 +65,14 @@ const FormularioRegister = () => {
 
   const registrarUsuario = async () => {
     try {
-      await postUsers(formData);
-      console.log('Usuario registrado:', formData);
+      const dataToPost = {
+        ...formData,
+        roles: parseInt(formData.roles, 10),
+        puesto: parseInt(formData.puesto, 10),
+      };
+
+      await postUsers(dataToPost);
+      console.log('Usuario registrado:', dataToPost);
       vaciarInputs();
     } catch (error) {
       console.error('Error registrando usuario:', error);
@@ -75,14 +81,14 @@ const FormularioRegister = () => {
 
   const vaciarInputs = () => {
     setFormData({
-      name: '',
-      lastName: '',
+      first_name: '',
+      last_name: '',
       email: '',
       password: '',
-      rol: '',
+      roles: '',
       puesto: '',
       cedula: '',
-      phone: '',
+      phone_number: '',
     });
     setErrors({});
   };
@@ -94,22 +100,24 @@ const FormularioRegister = () => {
         <input
           autoFocus
           type="text"
-          name="name"
-          placeholder="Name"
-          value={formData.name}
+          name="first_name"
+          placeholder="First Name"
+          value={formData.first_name}
           onChange={handleInputChange}
           className="inputRegister"
         />
-        {errors.name && <p style={{ color: 'red' }}>{errors.name}</p>}
+        {errors.first_name && <p style={{ color: 'red' }}>{errors.first_name}</p>}
+
         <input
           type="text"
-          name="lastName"
+          name="last_name"
           placeholder="Last Name"
-          value={formData.lastName}
+          value={formData.last_name}
           onChange={handleInputChange}
           className="inputRegister"
         />
-        {errors.lastName && <p style={{ color: 'red' }}>{errors.lastName}</p>}
+        {errors.last_name && <p style={{ color: 'red' }}>{errors.last_name}</p>}
+
         <input
           type="email"
           name="email"
@@ -119,6 +127,7 @@ const FormularioRegister = () => {
           className="inputRegister"
         />
         {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
+
         <input
           type="password"
           name="password"
@@ -128,9 +137,10 @@ const FormularioRegister = () => {
           className="inputRegister"
         />
         {errors.password && <p style={{ color: 'red' }}>{errors.password}</p>}
+
         <select
-          name="rol"
-          value={formData.rol}
+          name="roles"
+          value={formData.roles}
           onChange={handleInputChange}
           className="selectRegister"
         >
@@ -143,7 +153,8 @@ const FormularioRegister = () => {
             </option>
           ))}
         </select>
-        {errors.rol && <p style={{ color: 'red' }}>{errors.rol}</p>}
+        {errors.roles && <p style={{ color: 'red' }}>{errors.roles}</p>}
+
         <select
           name="puesto"
           value={formData.puesto}
@@ -160,25 +171,28 @@ const FormularioRegister = () => {
           ))}
         </select>
         {errors.puesto && <p style={{ color: 'red' }}>{errors.puesto}</p>}
+
         <input
           type="text"
           name="cedula"
           placeholder="Cedula"
           value={formData.cedula}
           onChange={handleInputChange}
-          className="input"
+          className="inputRegister"
         />
         {errors.cedula && <p style={{ color: 'red' }}>{errors.cedula}</p>}
+
         <input
           type="text"
-          name="phone"
-          placeholder="Phone"
-          value={formData.phone}
+          name="phone_number"
+          placeholder="Phone Number"
+          value={formData.phone_number}
           onChange={handleInputChange}
-          className="input"
+          className="inputRegister"
         />
-        {errors.phone && <p style={{ color: 'red' }}>{errors.phone}</p>}
-        <button type="submit">Registrar User</button>
+        {errors.phone_number && <p style={{ color: 'red' }}>{errors.phone_number}</p>}
+
+        <button type="submit">Registrar Usuario</button>
       </form>
     </div>
   );
