@@ -1,6 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
 
-// Páginas
 import Page404 from '../Pages/Page404/Page404';
 import Home from '../Pages/Home/Home';
 import Register from '../Pages/Register/Register';
@@ -22,8 +21,7 @@ const Routing = () => {
       <Route path='/register' element={<Register />} />
       <Route path='/perfil' element={<Perfil />} />
       <Route path='*' element={<Page404 />} />
-      <Route path='/a' element={<Buttons />} />
-      <Route path='/trabajadores' element={<Trabajadores />} />
+      <Route path='/justificaciones' element={<Justificaciones />} />
     </Routes>
   );
 };
