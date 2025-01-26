@@ -1,0 +1,12 @@
+.campana {
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5em;
+    height: 2.5em;
+}.campana:hover {
+    border: 1px solid skyblue;
+    transition: all 0.3s ease-in-out;
+}
