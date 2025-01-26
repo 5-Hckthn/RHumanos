@@ -5,3 +5,18 @@
     width: 100vw;
     color: black;
 }
+
+.buttonCount{
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 60px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+.buttonCount:hover{
+    background-color: rgba(6, 53, 70, 0.766);
+    cursor: pointer;
+}

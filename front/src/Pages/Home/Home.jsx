@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './index.css';
+import Perfil from '../Perfil/Perfil';
 // Icons
 
 
@@ -8,9 +9,8 @@ const Home = () => {
   return (
     <>
       <div className="main">
-        <div className="tareas"></div>
-        <div className="chat"></div>
-        <div className="reunionesPendientes"></div>
+        <h1><Perfil/></h1>
+
       </div>
     </>
   );

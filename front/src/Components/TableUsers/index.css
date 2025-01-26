@@ -6,9 +6,10 @@
 
 .containerTableUsers { 
     width: 82vw;
-    height: 80vh;
+    height: 65vh;
     border-radius: 7px 12px 12px 7px;
-    background-color: rgb(32, 26, 26);
+    background-color: rgba(227, 227, 227, 0.785);
+    color: black;
     overflow: auto;
     margin: 5%;
 }
@@ -21,11 +22,11 @@
     display: grid;
     grid-template-columns: 5% 15% 30% 20% 20% 10%;
     place-items: center;
-    color: white;
+    color: black;
 }
 
 .rowUserName {
-    color: red;
+    color: black;
     font-size: 20px;
 }
 
@@ -50,5 +51,5 @@
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
 
 .MoreVertIcon {
-    color: red;
+    color: black;
 }

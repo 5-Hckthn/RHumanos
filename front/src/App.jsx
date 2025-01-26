@@ -14,6 +14,7 @@ import { useContextValue } from './Context/UseContext';
 // Icons
 import LogoutIcon from '@mui/icons-material/Logout';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useNavigate } from 'react-router-dom';
 
 
 // Icons
@@ -32,13 +33,17 @@ function App() {
     setIsModalOpen(true);
   };
 
+  const navigate = useNavigate();
+
   const CloseModal = () => {
     setIsModalOpen(false);
-  };
+  };  
+
 
   const loggout = () => {
     localStorage.removeItem('userId')
     setUser(null)
+    navigate('/')
   }
 
   return (
@@ -57,7 +62,7 @@ function App() {
         </div>
         <div className="content">
           <div className="header">
-            <div className="titulo">Rec. Humanos</div>
+            <div className="titulo">´´</div>
             <div className='Notificacions'><ModalNotifications /></div>
             <div className="globalColor"><SwitchGlobalColor /></div>
           </div>
