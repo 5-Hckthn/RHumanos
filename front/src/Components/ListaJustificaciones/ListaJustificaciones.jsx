@@ -20,14 +20,15 @@ const ListaJustificaciones = () => {
     return (
         <div className="lista_justificaciones">
             <h2>Justificaciones Disponibles</h2>
-            <ul>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
                 {justificaciones.map((just, index) => (
-                    <li key={just.id || index}>
+                    <div key={just.id || index}>
                         <strong>Descripción:</strong> {just.descripcion} <br />
                         <strong>Estado:</strong> {just.estado}
-                    </li>
+                    </div>
+                    
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };

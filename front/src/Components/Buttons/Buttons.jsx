@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './Buttons.css';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import PauseIcon from '@mui/icons-material/Pause';
+import StopIcon from '@mui/icons-material/Stop';
 import { postJornada, updateJornada } from '../../Server/Crud/Crud';
 
 function Buttons() {
@@ -87,6 +90,7 @@ function Buttons() {
     };
 
     const handlePause = () => {
+        sessionStorage.setItem('jornada',count)
         setIsRunning(false);
         setShowResume(true);
     };
@@ -114,27 +118,31 @@ function Buttons() {
 
     return (
         <div className='containerModal'>
-            <div><AccountCircleIcon style={{ color: 'black', fontSize: '60px' }} /></div>
+            <div><AccountCircleIcon style={{ color: 'black', fontSize: '60px' }} />
+                <div>
+                    <div className='nombre'>Nombre</div>
+                </div>
+            </div>
             <h1>{formattedTime}</h1>
             <div className='buttons' style={{ marginTop: '20px' }}>
                 {!isRunning && !jornadaID && (
-                    <button onClick={handleStart}>
-                        Start
+                    <button onClick={handleStart} className='buttonCount'>
+                        <PlayArrowIcon />
                     </button>
                 )}
                 {isRunning && (
-                    <button onClick={handlePause}>
-                        Pause
+                    <button onClick={handlePause} className='buttonCount'>
+                        <PauseIcon />
                     </button>
                 )}
                 {showResume && (
-                    <button onClick={handleResume}>
+                    <button onClick={handleResume} className='buttonCount'>
                         Resume
                     </button>
                 )}
-                {jornadaID && (
-                    <button onClick={handleStop}>
-                        Stop
+                {jornadaID && isRunning && (
+                    <button onClick={handleStop} className='buttonCount'>
+                        <StopIcon />
                     </button>
                 )}
             </div>
