@@ -35,7 +35,7 @@ input:focus {
     box-shadow: 0 0 5px #4CAF50;
 }
   
-button {
+.buttonLogin {
     width: 100%;
     padding: 10px;
     background-color: #11dde8;

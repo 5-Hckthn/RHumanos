@@ -37,7 +37,7 @@ const Login = () => {
         <div className="remenber-forgot">
           <a href="#">Olvidé mi contraseña</a>
         </div>
-        <button className="btn" type="submit">Iniciar Sesión</button>
+        <button className="buttonLogin" type="submit">Iniciar Sesión</button>
       </form>
     </div>
   );
