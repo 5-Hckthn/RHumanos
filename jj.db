@@ -1,0 +1,1 @@
+ALTER TABLE api_justificaciones DROP COLUMN fk_user_id;
