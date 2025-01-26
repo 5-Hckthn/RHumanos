@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getJustificaciones } from '../../Server/Crud/Crud';
 
 const ListaJustificaciones = () => {
-    const justificaciones = [
-        { id: 1, descripcion: 'Primera justificación', estado: 'Aprobada' },
-        { id: 2, descripcion: 'Segunda justificación', estado: 'Pendiente' },
-        { id: 3, descripcion: 'Tercera justificación', estado: 'Denegada' },
-    ];
+    const [justificaciones, setJustificaciones] = useState([]);
+
+    const obtenerJustificaciones = async () => {
+        try {
+            const data = await getJustificaciones();
+            setJustificaciones(data);
+        } catch (error) {
+            console.error("Error al obtener las justificaciones:", error);
+        }
+    };
+
+    useEffect(() => {
+        obtenerJustificaciones();
+    }, []);
 
     return (
         <div className="lista_justificaciones">
             <h2>Justificaciones Disponibles</h2>
             <ul>
-                {justificaciones.map((just) => (
-                    <li key={just.id}>
+                {justificaciones.map((just, index) => (
+                    <li key={just.id || index}>
                         <strong>Descripción:</strong> {just.descripcion} <br />
                         <strong>Estado:</strong> {just.estado}
                     </li>
