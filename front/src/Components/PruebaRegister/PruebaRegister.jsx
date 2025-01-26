@@ -67,9 +67,9 @@ const FormularioRegister = () => {
   };
 
   return (
-    <div className="container">
-      <h1 className="title">Registro de Usuario</h1>
-      <form className="form" onSubmit={handleSubmit}>
+    <div className="containerRegister">
+      <h1 className="titleRegister">Registro de Usuario</h1>
+      <form className="formRegister" onSubmit={handleSubmit}>
         <input
           autoFocus
           type="text"
@@ -77,7 +77,7 @@ const FormularioRegister = () => {
           placeholder="Name"
           value={formData.name}
           onChange={handleInputChange}
-          className="input"
+          className="inputRegister"
         />
         <input
           type="text"
@@ -85,7 +85,7 @@ const FormularioRegister = () => {
           placeholder="Last Name"
           value={formData.lastName}
           onChange={handleInputChange}
-          className="input"
+          className="inputRegister"
         />
         <input
           type="email"
@@ -93,7 +93,7 @@ const FormularioRegister = () => {
           placeholder="Email"
           value={formData.email}
           onChange={handleInputChange}
-          className="input"
+          className="inputRegister"
         />
         <input
           type="password"
@@ -101,13 +101,13 @@ const FormularioRegister = () => {
           placeholder="Password"
           value={formData.password}
           onChange={handleInputChange}
-          className="input"
+          className="inputRegister"
         />
         <select
           name="rol"
           value={formData.rol}
           onChange={handleInputChange}
-          className="select"
+          className="selectRegister"
         >
           <option value="" disabled>
             Select Role
@@ -122,7 +122,7 @@ const FormularioRegister = () => {
           name="puesto"
           value={formData.puesto}
           onChange={handleInputChange}
-          className="select"
+          className="selectRegister"
         >
           <option value="" disabled>
             Select Puesto
@@ -149,7 +149,7 @@ const FormularioRegister = () => {
           onChange={handleInputChange}
           className="input"
         />
-        <button type="submit" className="button">
+        <button type="submit" className="buttonRegister">
           Registrar User
         </button>
       </form>
