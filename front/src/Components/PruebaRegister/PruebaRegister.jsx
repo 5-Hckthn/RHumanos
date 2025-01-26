@@ -88,9 +88,9 @@ const FormularioRegister = () => {
   };
 
   return (
-    <div className="container">
-      <h1 className="title">Registro de Usuario</h1>
-      <form className="form" onSubmit={handleSubmit}>
+    <div className="containerRegister">
+      <h1 className="titleRegister">Registro de Usuario</h1>
+      <form className="formRegister" onSubmit={handleSubmit}>
         <input
           autoFocus
           type="text"
@@ -98,7 +98,7 @@ const FormularioRegister = () => {
           placeholder="Name"
           value={formData.name}
           onChange={handleInputChange}
-          className="input"
+          className="inputRegister"
         />
         {errors.name && <p style={{ color: 'red' }}>{errors.name}</p>}
         <input
@@ -107,7 +107,7 @@ const FormularioRegister = () => {
           placeholder="Last Name"
           value={formData.lastName}
           onChange={handleInputChange}
-          className="input"
+          className="inputRegister"
         />
         {errors.lastName && <p style={{ color: 'red' }}>{errors.lastName}</p>}
         <input
@@ -116,7 +116,7 @@ const FormularioRegister = () => {
           placeholder="Email"
           value={formData.email}
           onChange={handleInputChange}
-          className="input"
+          className="inputRegister"
         />
         {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
         <input
@@ -125,14 +125,14 @@ const FormularioRegister = () => {
           placeholder="Password"
           value={formData.password}
           onChange={handleInputChange}
-          className="input"
+          className="inputRegister"
         />
         {errors.password && <p style={{ color: 'red' }}>{errors.password}</p>}
         <select
           name="rol"
           value={formData.rol}
           onChange={handleInputChange}
-          className="select"
+          className="selectRegister"
         >
           <option value="" disabled>
             Select Role
@@ -148,7 +148,7 @@ const FormularioRegister = () => {
           name="puesto"
           value={formData.puesto}
           onChange={handleInputChange}
-          className="select"
+          className="selectRegister"
         >
           <option value="" disabled>
             Select Puesto
