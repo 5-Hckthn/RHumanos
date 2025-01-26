@@ -77,12 +77,7 @@ const Login = () => {
           Iniciar Sesión
         </button>
       </form>
-      <div className="register-link">
-        {/* Enlace para registrarse si no se tiene cuenta */}
-        <p>
-          ¿No tienes cuenta? <a href="#">Regístrate</a>
-        </p>
-      </div>
+      
     </div>
   );
 };

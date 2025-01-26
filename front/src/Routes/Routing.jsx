@@ -9,6 +9,7 @@ import JustificacionesForm from '../Components/Justificaciones/justificaciones';
 import Login from '../Pages/Login/Login';
 import Perfil from '../Pages/Perfil/Perfil';
 import Asistencias from '../Pages/Asistencias/Asistencias';
+import Justificaciones from '../Pages/Justificaciones/Justificaciones';
 
 
 const Routing = () => {
@@ -21,7 +22,7 @@ const Routing = () => {
       <Route path='/register' element={<Register />} />
       <Route path='/perfil' element={<Perfil />} />
       <Route path='*' element={<Page404 />} />
-      <Route path='/justificaciones' element={<JustificacionesForm />} />
+      <Route path='/justificaciones' element={<Justificaciones />} />
     </Routes>
   );
 };
