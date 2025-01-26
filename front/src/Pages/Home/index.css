@@ -74,12 +74,6 @@
 
 /* ///////////////////////////////// */
 
-.main {
-    display: grid;
-    grid-template-columns: 38.5% 60%;
-    margin: 2%;
-}
-
 .reportes {
     width: 100%;
     height: 100%;

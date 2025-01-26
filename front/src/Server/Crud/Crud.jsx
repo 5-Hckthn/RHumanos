@@ -16,6 +16,26 @@ const getUsersCrud = async () => {
   }
 };
 
+const datUsers_API = "http://localhost:8000/users/";
+
+export async function dataUsersGET() {
+  try {
+    const response = await fetch(datUsers_API);
+    if (!response.ok) {
+      throw new Error("Error al obtener los usuarios");
+    }
+    const data = await response.json();
+    console.log(data, data.id);
+    for (const i in data) {
+        return data[i]
+      }
+    
+  } catch (error) {
+    console.error("Error en dataUsersGET:", error);
+    throw error;
+  }
+}
+
 const getUserById = async (id) => {
   try {
     const response = await fetch(`${url}${id}`);
@@ -82,69 +102,3 @@ const getJustificaciones = async () => {
 
 export { getUsersCrud, getUserById, getRoleById, getAllPuestos, postJustificacion, getJustificaciones };
 
-
-// const postToys = async (newToy) => {
-//   try {
-//     const response = await fetch(url, {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify({ name: newToy.name, price: newToy.price })
-
-//     });
-//     if (!response.ok) {
-//       throw new Error('Error en la solicitud POST');
-//     }
-//     const data = await response.json();
-//     console.log(data);
-//   } catch (error) {
-//     console.error('ERROR POST:', error);
-//   }
-// };
-// ////////////////////////////////////////////////////////////////////////////
-
-
-// const updateToys = async (id, updatedToy) => {
-//   try {
-//     const response = await fetch(url + id + '/', {
-//       method: 'PUT',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify(updatedToy),
-//     });
-
-//     if (!response.ok) {
-//       throw new Error('Error en la solicitud PUT');
-//     }
-
-//     const data = await response.json();
-//     console.log(data);
-//   } catch (error) {
-//     console.error('ERROR PUT:', error);
-//   }
-// };
-// // updateToy(1, { name: 'New Toy Name', description: 'Updated description' });
-// ////////////////////////////////////////////////////////////////////////////
-
-
-
-// const deleteToys = async (id) => {
-//   try {
-//     const response = await fetch(url + id + '/', {
-//       method: 'DELETE',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//     });
-//     if (!response.ok) {
-//       throw new Error('Error en la solicitud DELETE');
-//     }
-//     console.log('User deleted successfully');
-//   } catch (error) {
-//     console.error('ERROR DELETE:', error);
-//   }
-// };
-// // deleteToy(1);  Elimina el juguete con ID 1
-// ////////////////////////////////////////////////////////////////////////////
