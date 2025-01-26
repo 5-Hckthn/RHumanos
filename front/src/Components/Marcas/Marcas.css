@@ -1,0 +1,78 @@
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Encabezado */
+  h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Encabezado de tabla */
+  thead {
+    background-color: #0078d4;
+    color: #fff;
+    text-align: left;
+  }
+  
+  th,
+  td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  /* Estilo de las filas */
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #e6f7ff;
+    cursor: pointer;
+  }
+  
+  /* Texto */
+  th {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  td {
+    font-size: 13px;
+    color: #555;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    table {
+      font-size: 12px;
+    }
+  
+    th,
+    td {
+      padding: 8px;
+    }
+  }
+  
