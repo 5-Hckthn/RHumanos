@@ -14,7 +14,7 @@
 }
 
 .modalUser {
-    background-color: #ffffff;
+    background-color: #13133c;
     border-radius: 10px;
     color: white;
     width: 50vw;
@@ -28,7 +28,7 @@
     height: 90%;
     display: grid;
     place-items: center;
-
+    /* para commit */
 }
 
 .containerXtoCloseModal {
