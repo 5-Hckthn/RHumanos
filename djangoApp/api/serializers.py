@@ -27,6 +27,7 @@ class DescansoSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class JornadaSerializer(serializers.ModelSerializer):
+    cedula = serializers.CharField(source="usuario.cedula",read_only=True)
     class Meta:
         model = Jornada
         fields = '__all__'
